@@ -11,7 +11,7 @@ Welcome to my portfolio! This is a responsive webpage designed to showcase my wo
 - **Responsive Design**: Whether you're viewing this page on a desktop, tablet, or mobile device, the layout will adapt to your viewport.
 ## Gif
 Adding GiFS readme.md files
-![](https://github.com/dudi62/portfolio/blob/master/dudi62.github.gif)
+![](https://github.com/dudi62/portfolio/blob/master/images/gif.gif)
 
 ## Customization
 
