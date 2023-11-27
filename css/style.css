@@ -1,0 +1,324 @@
+/* Root CSS variables for easy color management */
+:root {
+  --SECTION-BORDER: rgb(4, 19, 32);
+  --SECTION-H2-COLOR: rgb(15, 25, 34);
+  --IMAGE-BORDER: rgb(17, 32, 46);
+  --PORTFOLIO-LINK-COLOR: rgb(5, 17, 27);
+  --FIGURE-CAPTION: rgb(212, 229, 160);
+  --HEADER-BGCOLOR: rgb(5, 17, 27);
+  --CONTACT-COLOR: rgb(5, 17, 27);
+  --CONTACT-TEXT-COLOR: rgb(212, 229, 160);
+  --BLACK: black;
+  --ORANGE: rgb(248, 94, 5);
+}
+
+/* Global styles */
+* {
+  box-sizing: border-box;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body styles */
+body {
+  background-color: rgba(222, 228, 231, 0.808);
+}
+
+/* Header styles */
+.header {
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 10%;
+  background: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+}
+
+/* Logo styles */
+.logo {
+  font-size: 30px;
+  color: var(--BLACK);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Navbar link styles */
+.navbar a {
+  font-size: 20px;
+  color: var(--BLACK);
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 35px;
+  transition: .5s;
+}
+
+/* Navbar link hover and home link styles */
+.navbar a:hover, .navbar a.home {
+  font-weight: 800;
+  color: var(--ORANGE);
+}
+
+/* Hero banner styles */
+.hero-banner {
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  padding: 0 10%;
+  background: url("https://images.unsplash.com/photo-1637273045211-df6d2e06b26e?q=80&w=1925&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") no-repeat center;
+  background-size: cover;
+}
+
+/* Hero banner heading styles */
+.hero-banner h2 {
+  font-size: 50px;
+  color: var(--ORANGE);
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Styles for home image */
+.home-img {
+  position: absolute;
+  top: 0;
+  right: 0px;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  transition: 3s;
+}
+
+/* Styles for home image on hover */
+.home-img:hover {
+  background: var(--BLACK);
+  opacity: .7;
+}
+
+/* Styles for main container */
+.container {
+  width: 92%;
+  padding-bottom: 120px;
+  margin: 40px auto 0px auto;
+  display: grid;
+  grid-template-columns: 16% 76%; /* 16% for the sidebar and 76% for the main content */
+  gap: 4%; /* 4% gap between the sidebar and main content */
+}
+
+/* Styles for page section */
+.page-section {
+  border-right: 4px solid var(--SECTION-BORDER);
+  font-size: 40px;
+  text-align: end;
+  padding-right: 15px;
+}
+
+/* Styles for paragraph text */
+p {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1;
+  margin: 10px 10px 10px 10px;
+}
+
+/* Styles for border */
+.border {
+  border: 5px solid var(--IMAGE-BORDER);
+  background-color: rgb(243, 226, 191);
+}
+
+/* Styles for h2 elements */
+h2 {
+  color: var(--SECTION-H2-COLOR);
+  text-align: end;
+  font-size: clamp(2rem, 3vw, 3rem); /* Responsive font size */
+  font-weight: 900;
+}
+
+/* Styles for portfolio grid */
+#portfolio {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Two columns of equal width */
+  grid-template-rows: 410px 210px 210px; /* Three rows with specified heights */
+  grid-template-areas: /* Specified grid areas */
+    "p0 p0"
+    "p1 p2"
+    "p3 p4";
+  gap: 20px; /* Gap between grid items */
+}
+
+/* Styles for portfolio links */
+#portfolio a {
+  color: var(--PORTFOLIO-LINK-COLOR);
+  text-decoration: none;
+}
+
+/* Styles for grid areas */
+.p0 {
+  grid-area: p0;
+}
+.p1 {
+  grid-area: p1;
+}
+.p2 {
+  grid-area: p2;
+}
+.p3 {
+  grid-area: p3;
+}
+.p4 {
+  grid-area: p4;
+}
+
+/* Styles for figure */
+figure {
+  width: 100%;
+  position: relative;
+  border: 5px solid var(--IMAGE-BORDER);
+}
+
+/* Styles for portfolio images */
+#portfolio img {
+  object-fit: cover;
+  width: 100%;
+  filter: brightness(0.7) saturate(0.9);
+  opacity: 90%;
+}
+
+/* Styles for portfolio images and figures on hover */
+#portfolio img:hover,
+#portfolio figure:hover {
+  filter: sepia(0%);
+  opacity: 100%;
+  transition: 500ms;
+}
+
+/* Styles for figcaption */
+figcaption {
+  background-color: var(--FIGURE-CAPTION);
+  padding: 10px;
+  position: absolute;
+  bottom: 30px;
+}
+
+/* Styles for home button */
+.home-but a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  background: transparent;
+  border: 2px solid var(--CONTACT-COLOR);
+  border-radius: 50%;
+  font-size: 50px;
+  color: var(--CONTACT-COLOR);
+  text-decoration: none;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+/* Styles for home button on hover */
+.home-but a:hover {
+  color: var(--CONTACT-TEXT-COLOR);
+}
+
+/* Styles for pseudo-element before home button */
+.home-but a::before {
+  content: '' ;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: var(--ORANGE);
+  z-index: -1;
+  transition: 0.4s;
+}
+
+/* Styles for pseudo-element before home button on hover */
+.home-but a:hover::before {
+  width: 100%;
+}
+
+/* Styles for smaller screens */
+@media (max-width: 900px) {
+  /* Adjust grid layout for container */
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Adjust grid layout for portfolio */
+  #portfolio {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(5, auto);
+    grid-template-areas:
+      "p0"
+      "p1"
+      "p2"
+      "p3"
+      "p4";
+  }
+
+  /* Adjust font size and margin for navbar links */
+  .navbar a {
+    font-size: 16px;
+    margin-left: 20px;
+  }
+
+  /* Adjust font size for logo */
+  .logo {
+    font-size: 24px;
+  }
+
+  /* Adjust font size for hero banner heading */
+  .hero-banner h2 {
+    font-size: 40px;
+  }
+}
+
+/* Styles for mobile phones */
+@media (max-width: 480px) {
+  /* Adjust width, padding, and margin for container */
+  .container {
+    width: 100%;
+    padding: 0;
+    margin: 20px auto 0px auto;
+  }
+
+  /* Adjust padding for header */
+  .header {
+    padding: 10px 5%;
+  }
+
+  /* Adjust font size and margin for navbar links */
+  .navbar a {
+    font-size: 14px;
+    margin-left: 15px;
+  }
+
+  /* Adjust font size for logo */
+  .logo {
+    font-size: 20px;
+  }
+
+  /* Adjust padding for hero banner */
+  .hero-banner {
+    padding: 0 5%;
+  }
+
+  /* Adjust font size for hero banner heading */
+  .hero-banner h2 {
+    font-size: 30px;
+  }
+}
+
+
+
