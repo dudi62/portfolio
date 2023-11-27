@@ -10,11 +10,6 @@ Welcome to my portfolio! This is a responsive webpage designed to showcase my wo
 - **Application Links**: Click on github  image to be taken to that deployed application.
 - **Responsive Design**: Whether you're viewing this page on a desktop, tablet, or mobile device, the layout will adapt to your viewport.
 
-## Mock-Up
-
-The following animation shows the web application's appearance and functionality:
-
-![portfolio demo](./images/01-css-challenge-demo.gif)
 
 ## Customization
 
